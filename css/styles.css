@@ -1,40 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: red solid 1px
+  margin: 0;
+  padding: 0;
+  border: red solid 1px;
+  font-size: 10px;
+  color: white;
 }
 
 header {
-    background: #333646;
+  background: #333646;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* ============= Navbar ============= */
-header,
+.navbar,
 .nav-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar img {
-    width: 40px;
-    align-self: stretch;
+  width: 40px;
+  margin: 10px auto;
+}
+
+.nav-tab {
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .nav-tab li a {
-    color: white;
-    margin: 0 5px;
-    font-size: 1rem;
+  font-size: 1.8rem;
+  opacity: 75%;
+}
+
+.nav-tab li a:hover {
+  opacity: 100%;
 }
 
 .nav-tab li {
-    text-align: center;
+  text-align: center;
+}
+
+/* ============= About me ============= */
+
+.about-me {
+  background: #333646;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-pic .pic img {
+  width: 300px;
+}
+
+.name {
+}
+
+.name p {
+  font-size: 4rem;
+}
+
+.intro .xxx {
+  color: #a0a1a8;
+}
+.intro .yyy {
+  font-size: 1.8rem;
+  color: #f0f0f0;
+}
+
+.intro .zzz {
+  font-size: 1.2rem;
+  color: #b2b3b9;
 }
