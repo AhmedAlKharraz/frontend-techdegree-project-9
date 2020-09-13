@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: red solid 1px
+}
+
+header {
+    background: #333646;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ============= Navbar ============= */
+header,
+.nav-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar img {
+    width: 40px;
+    align-self: stretch;
+}
+
+.nav-tab li a {
+    color: white;
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+.nav-tab li {
+    text-align: center;
+}
