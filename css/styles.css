@@ -1,9 +1,37 @@
 * {
   margin: 0;
   padding: 0;
-  border: red solid 1px;
+  /*border: red solid 1px;*/
   font-size: 10px;
   color: white;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  color: #a0a1a8;
+
+}
+
+.sans-font {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: #b2b3b9;
+  line-height: 2.5rem;
+
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #f0f0f0;
+  line-height: 3rem;
 }
 
 header {
@@ -37,11 +65,24 @@ a {
 
 .nav-tab li a {
   font-size: 1.8rem;
-  opacity: 75%;
+  opacity: 60%;
+  position: relative;
 }
 
 .nav-tab li a:hover {
   opacity: 100%;
+}
+
+.clicked:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffaf29;
+  border-radius: 50%;
+  bottom: -15px;
+  align-self: center;
+
 }
 
 .nav-tab li {
@@ -58,25 +99,126 @@ a {
 }
 
 .name-pic .pic img {
-  width: 300px;
-}
-
-.name {
+  width: 350px;
 }
 
 .name p {
   font-size: 4rem;
+  font-family: "Spartan", sans-serif;
 }
 
-.intro .xxx {
-  color: #a0a1a8;
-}
-.intro .yyy {
-  font-size: 1.8rem;
-  color: #f0f0f0;
+.name::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  margin-top: 5px;
+  background: #ffaf29;
 }
 
-.intro .zzz {
-  font-size: 1.2rem;
-  color: #b2b3b9;
+.intro {
+  width: 350px;
+}
+
+.my-portfolio {
+  background: #252734;
+}
+
+/* ============= Cards ============= */
+
+/*
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+*/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+}
+
+.card {
+  background: #424657;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* to fix */
+  margin: 10px 10px;
+}
+
+.card .card-background {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.card .card-background img {
+  display: block;
+  width: 100%;
+}
+
+.card .card-link {
+  position: relative;
+}
+
+.card .card-link div {
+  position: absolute;
+  background: rgba(255, 175, 41, 0.5);
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card .card-link div a {
+  background: #ffaf29;
+  padding: 1px 45px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ============= Contact me ============= */
+
+.contact-me {
+  background: #333646;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-me .send-email,
+.contact-me .social-media {
+  margin: auto;
+}
+
+.send-email,
+.social-media p,
+.icons {
+  text-align: center;
+}
+
+.send-email button {
+  width: 250px;
+  height: 50px;
+  background: #ffaf29;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+  align-self: center;
+}
+
+.icons a {
+  display: inline-block;
+  margin: 10px 10px;
+  align-items: center;
+}
+
+.icons a img {
+  width: 30px;
 }
