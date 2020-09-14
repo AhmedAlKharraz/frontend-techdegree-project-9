@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,14 +18,14 @@ h1 {
 
 .roboto-mono-font {
   font-family: "Roboto Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #a0a1a8;
 
 }
 
 .sans-font {
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #b2b3b9;
   line-height: 2.5rem;
 
@@ -34,8 +38,56 @@ h1 {
   line-height: 3rem;
 }
 
+.about-me,
+.my-portfolio,
+.contact-me {
+  margin-top: -1px;
+}
+
+header,
+.about-me,
+.name-pic,
+.intro,
+.my-portfolio h1,
+.cards,
+.contact-me,
+.send-email,
+.social-media {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bg1 {
+  background: #333646;
+
+}
+
+.stick-bg {
+  background: #333646;
+  width: 100%;
+  position: fixed;
+  height: 0;
+  z-index: 99;
+}
+
 header {
   background: #333646;
+  padding: 20px 20px 5px 20px;
+
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sticky+.container {
+  padding-top: 102px;
 }
 
 li {
@@ -47,6 +99,7 @@ a {
 }
 
 /* ============= Navbar ============= */
+
 .navbar,
 .nav-tab {
   display: flex;
@@ -63,6 +116,10 @@ a {
   justify-content: space-around;
 }
 
+.nav-tab li {
+  padding-bottom: 20px;
+}
+
 .nav-tab li a {
   font-size: 1.8rem;
   opacity: 60%;
@@ -73,6 +130,7 @@ a {
   opacity: 100%;
 }
 
+
 .clicked:after {
   content: "";
   position: absolute;
@@ -82,6 +140,9 @@ a {
   border-radius: 50%;
   bottom: -15px;
   align-self: center;
+  left: 0;
+  right: 0;
+  margin: auto;
 
 }
 
@@ -138,6 +199,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
+
 }
 
 .card {
@@ -147,6 +209,10 @@ a {
   flex-direction: column;
   /* to fix */
   margin: 10px 10px;
+}
+
+.card .card-disc {
+  padding: 10px 10px 0 10px;
 }
 
 .card .card-background {
@@ -190,6 +256,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-bottom: 20px;
 }
 
 .contact-me .send-email,
@@ -221,4 +288,107 @@ a {
 
 .icons a img {
   width: 30px;
+}
+
+@media(min-width:768px) {
+
+  .sticky+.container {
+    padding-top: 500px;
+  }
+
+  .navbar,
+  .about-me {
+    flex-direction: row;
+  }
+
+  .navbar img {
+    width: 40px;
+    margin: 0;
+  }
+
+  .navbar nav,
+  .intro {
+    margin-left: auto;
+  }
+
+  .nav-tab li {
+    margin-left: 20px;
+  }
+
+
+
+  .about-me,
+  .my-portfolio,
+  .contact-me {
+    padding: 20px;
+  }
+
+  .intro {
+    margin-top: auto;
+  }
+
+  .intro p:nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  .intro p:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+  .card {
+    margin: 15px;
+  }
+
+  .card-link {
+    overflow: hidden;
+  }
+
+  /* I added this because I tried to do it from js in app.js */
+  .card-hover {
+    overflow: visible;
+    transform: translateY(100px);
+    transition: 0.2s;
+    transition-delay: 0.15s;
+  }
+
+  .my-portfolio h1 {
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+  .contact-me {
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+  }
+
+
+  .contact-me h1 {
+    position: absolute;
+    padding-bottom: 20px;
+    left: 0;
+    margin-right: auto;
+  }
+
+  .contact-me .social-media,
+  .contact-me .send-email {
+    padding-top: 40px;
+    max-width: 1000px;
+  }
+
+  .contact-me .social-media {
+    margin: 0 auto;
+  }
+
+  .social-media .icons {
+    padding-top: 10px;
+  }
+
 }
